@@ -196,7 +196,7 @@ int soc_adsp_halt_cpu(int id)
 	 * by itself once WFI (wait for interrupt) instruction
 	 * runs.
 	 */
-	CAVS_INTCTRL[id].l2.set = CAVS_L2_DWCT0;
+	CAVS_INTCTRL[id].l2.set = CAVS_L2_DWCT0 | CAVS_L2_IDC;
 #endif
 
 	/* Stop sending IPIs to this core */
